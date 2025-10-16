@@ -28,3 +28,7 @@ func NewUnexpectedError(message string) *AppError {
 func NewValidationError(message string) *AppError {
 	return &AppError{Code: http.StatusUnprocessableEntity, Message: message}
 }
+
+func NewAuthenticationError(message string) *AppError {
+	return &AppError{Code: http.StatusUnauthorized, Message: message}
+}
